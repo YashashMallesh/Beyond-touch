@@ -13,6 +13,12 @@ import Layout from '../layouts/Layout.astro';
         <br><strong>Validate:</strong> the gesture must be held long enough, and the system must be unlocked.
         <br><strong>Act:</strong> PyAutoGUI sends the corresponding keystroke to the focused window.<br>
         Because the final step is a plain keystroke, no integration with the slideshow application is needed.</p>
+      <p><strong>Core Functions:</strong><br>fingers_up(lm): Compares the vertical y-coordinates of fingertips (indices 8, 12, 16, 20) with knuckles (index-2) to check whether fingers are extended.
+        <br>thumb_up(lm): Evaluates whether the thumb is extended higher than the base of the other fingers.
+        <br>classify(lm): Maps the boolean tuple of raised fingers to named gestures like "index", "two", "palm", or "fist".</p>
+        <p><strong>Control Mechanism:</strong><br>Locking System: The app defaults to a LOCKED state. To arm it, the user must hold a "fist" gesture for more than 1.5 seconds (LOCK_HOLD).
+          <br>Debouncing & Cooldown: Uses COOLDOWN = 1.0 second between actions to prevent accidental spamming of keystrokes.
+          <br>UI Feedback: Displays real-time status overlays (ARMED/LOCKED), current detected gestures, and feedback messages directly onto the OpenCV video frame. Pressing the ESC key (27) terminates the application.</p>
 </Layout>
 
 <style>
