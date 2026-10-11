@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="ISHARA">
+<h1>Workflow</h1>
+<h2>Webcam → Hand tracking (MediaPipe) → Gesture recognition
+      → Lock & hold validation → Keyboard command (PyAutoGUI)
+      → Active slideshow window</h2>
+      <p><strong>Capture:</strong> OpenCV reads frames from the webcam.<br>
+        <strong>Detect:</strong> MediaPipe locates the hand and its landmarks.
+        <br><strong>Classify:</strong> the app determines which gesture the hand is making.
+        <br><strong>Validate:</strong> the gesture must be held long enough, and the system must be unlocked.
+        <br><strong>Act:</strong> PyAutoGUI sends the corresponding keystroke to the focused window.<br>
+        Because the final step is a plain keystroke, no integration with the slideshow application is needed.</p>
+</Layout>
+
+<style>
+  h1 {
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    margin-bottom: 40px;
+  }
+
+  .post-list {
+    list-style: none;
+  }
+
+  .post-list li {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .post-list a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+
+  .post-title {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .post-title:hover {
+    color: var(--link);
+  }
+
+  .post-date {
+    color: var(--text-muted);
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-left: 16px;
+  }
+
+  .post-excerpt {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+  .empty {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-top: 32px;
+  }
+</style>

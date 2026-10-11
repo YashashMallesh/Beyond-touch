@@ -1,0 +1,85 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Code } from 'astro:components';
+---
+
+<Layout title="ISHARA">
+<section>
+<h1>OVERVIEW</h1>
+<p>
+  <strong>Key characteristics</strong><br>
+  Touch-free: control slides from across the room.<br>
+  Hardware-light: a standard webcam is all you need.<br>
+  Deliberate by design: a lock mechanism and hold-to-trigger gestures prevent accidental commands.<br>
+  Platform-agnostic output: sends standard keyboard commands, so it works with Google Slides and PowerPoint.<br>
+</p>
+</section>
+<section>
+<p>
+  <strong>How it works</strong><br>
+  Gesture Presenter is a compact Python application built on three well-proven libraries:
+  <br>MediaPipe handles hand tracking and landmark detection.
+  <br>OpenCV captures and displays the webcam feed.
+  <br>PyAutoGUI sends the keystrokes that drive your slideshow.
+</p>
+</section>
+</Layout>
+
+<style>
+  h1 {
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    margin-bottom: 40px;
+  }
+
+  .post-list {
+    list-style: none;
+  }
+
+  .post-list li {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .post-list a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+
+  .post-title {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .post-title:hover {
+    color: var(--link);
+  }
+
+  .post-date {
+    color: var(--text-muted);
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-left: 16px;
+  }
+
+  .post-excerpt {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+  .empty {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-top: 32px;
+  }
+</style>

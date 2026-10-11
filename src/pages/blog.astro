@@ -1,0 +1,127 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import img from '../assets/Presentation.jpg';
+import gest from '../assets/gest.png';
+---
+
+<Layout title="ISHARA">
+  <h1>Blog</h1>
+  <p class="subtitle">Gesture-Presenter<br>A touch-free presentation controller built with python modules.</p>
+
+  <ul class="post-list">
+    <li>
+      <a href="https://github.com/navaminagaraja23-ops/gesture-presenter">
+        <span class="post-title">Gesture-Presenter</span>
+        <span class="post-date">2026</span>
+      </a>
+      <p class="post-excerpt"><strong>The Problem</strong><br>Every presenter knows the moment. You’re mid-sentence, building to the point of the slide, and you have to drift back to the laptop or fumble with a clicker whose batteries are probably dying. The flow breaks, and the audience notices.</p>
+      <div class="image-container">
+        <Image src={img} alt="Presentation" class="curved-image" />
+      </div>
+      <p class="post-excerpt"><strong>The Idea</strong><br>Presenting should feel like speaking, not operating equipment. A clicker is one more thing to carry, charge, and lose. A laptop keyboard ties you to a desk. Your hands are already part of how you communicate, so we asked a simple question: what if they could also run the deck?</p>
+      <p>Gesture Presenter watches your hand through a standard webcam, recognises a small set of deliberate gestures, and translates them into the keyboard commands your slideshow already understands. No proprietary app, and no changes to your slides.<br>Only your device's camera can control your presentation smoothly.</p>
+      <div class="image-container">
+        <Image src = {gest} alt = "Hand gesture" class = "image" />
+      </div>
+      <p class = "post-excerpt"><strong>The hardest problem: not doing things by accident</strong><br>Recognising a gesture is the easy half. The harder half is ignoring everything that isn’t a gesture. You talk with your hands, you scratch your nose, you point at a chart. A naive system would flip slides all through your talk.<br>We solved this with two safeguards.<br>
+        <strong>1. A lock.</strong> Gestures do nothing until you unlock the system by holding a fist for 1.5 seconds. Lock it again whenever you want to gesture freely at the audience, and nothing will fire.<br>
+       <strong>2. Deliberate holds.</strong> Gestures must be held briefly before they register. A hand passing through a shape mid-conversation won’t trigger a command. A hand that means it will.<br>
+       The result is a controller you can trust, and trust is what lets you stop thinking about the tool and start thinking about your audience. 
+      </p>
+    </li>
+  </ul>
+  <ul class="post-list">
+  <li>
+  <p class = "post-excerpt"><strong>Who it’s for</strong><br>
+<strong>Teachers and lecturers </strong>who want to move around the room instead of standing behind a podium.
+<br><strong>Conference speakers and founders</strong> who want a clean, clicker-free stage presence.
+<br><strong>Demo-heavy presenters</strong> who need their hands free for a live product.
+<br><strong>Accessibility-minded teams</strong> exploring alternative input methods.</p>
+  </li>
+  </ul>
+
+  <p class="empty"><strong>Built by</strong>.<br>Yashash    Yashwanth   Rakshitha    Navami </p>
+</Layout>
+
+<style>
+  h1 {
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    margin-bottom: 40px;
+  }
+
+  .post-list {
+    list-style: none;
+  }
+
+  .post-list li {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .post-list a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+
+  .post-title {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .post-title:hover {
+    color: var(--link);
+  }
+
+  .post-date {
+    color: var(--text-muted);
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-left: 16px;
+  }
+
+  .post-excerpt {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+  .empty {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-top: 32px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    width: 100%;
+    padding: 20px;
+  }
+
+  .curved-image {
+    border-radius: 16px;            
+    border: 3px solid #334155;      
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .image {
+    border-radius: 16px;                
+    max-width: 100px;
+    height: auto;
+    object-fit: cover;
+  }
+</style>

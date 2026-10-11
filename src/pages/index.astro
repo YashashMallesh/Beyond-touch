@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Temp from '../assets/intro.png'
+---
+
+<Layout title="ISHARA">
+  <section>
+    <h1>Hi, this is team <strong>ISHARA</strong><small> - beyond touch !</small></h1>
+    <h2>We built the ultimate Gesture-Presenter.</h2>
+    <p>
+      <strong>Your Hand is the Clicker</strong>
+    </p>
+    <p>Gesture Presenter uses your webcam to recognise hand gestures and sends the matching keyboard commands to Google Slides or PowerPoint, so you can control your presentation from a distance without a clicker.</p>
+    <div class="image-container">
+      <Image src={ Temp } alt="A beautiful nebula" class="curved-image" />
+    </div>
+    <p>Great presentations depend on presence. Yet most speakers spend part of every talk tied to a laptop or holding a clicker, 
+    and each trip back to the keyboard pulls attention away from the audience.<br>Gesture Presenter removes that friction.
+    It uses computer vision to track your hand through an ordinary webcam and translates seven simple gestures into slide controls: next, previous, black screen, first slide, mute, end show, and a lock to keep everything safe. 
+    Because it sends standard keyboard commands, it works with Google Slides and PowerPoint without plugins, add-ons, or changes to your deck.It’s built to be trusted as much as it’s built to be clever. 
+    <br>Gestures are ignored until you unlock the system with a deliberate fist hold, and each gesture must be held briefly before it registers. 
+    Natural hand movement while you speak won’t flip your slides.</p>
+  </section>
+  <section>
+  <p>
+  <strong>Key points to emphasise</strong>
+  </p>
+  <p>
+  1. Zero extra hardware. It works with the webcam already on your laptop.
+  <br>2. Works with tools people already use. Google Slides and PowerPoint need no plugins.
+  <br>3. Designed against false triggers. The lock and hold-to-trigger mechanics make it practical for real use, 
+  which is the part many gesture demos skip.
+  <br>4. Learnable in a minute. Seven gestures, with finger count mapped to intuition.
+  <br>5. Open source. Anyone can extend it.
+  </p>
+  </section>
+  <section>
+    <p><strong>About ISHARA</strong><br>
+      Team ISHARA is a team of students who are interested in building cool tech things which can be implemented to solve
+      the real world problems.
+    </p>
+  </section>
+    <p>
+      Use the links to explore the <a href="/blog"> blog </a>
+      and <a href="/docs"> documentation</a>.
+    </p>
+</Layout>
+
+<style>
+  h1 {
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    color: #1a73e8;
+  }
+
+  p {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+    max-width: 600px;
+  }
+
+  a {
+    color: var(--link);
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center; /* Horizontal alignment */
+    align-items: center;     /* Vertical alignment */
+    width: 100%;
+    padding: 20px;
+  }
+
+  .curved-image {
+    border-radius: 16px;            /* Curves the borders */
+    border: 3px solid #334155;      /* Optional: adds a border frame */
+    max-width: 600px;
+    height: auto;
+    object-fit: cover;
+  }
+</style>

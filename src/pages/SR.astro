@@ -1,0 +1,77 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="ISHARA">
+<h1>Safety and Reliability</h1>
+<p><strong>Capture:</strong> gestures are ignored until you unlock with a deliberate fist hold.<br>
+        <strong>Lock state:</strong> each gesture must be held briefly, so unclear or passing movements trigger nothing.
+        <br><strong>Hold-to-trigger:</strong> the app determines which gesture the hand is making.
+        <br><strong>Easy re-lock:</strong> hold a fist again whenever you want to gesture freely.
+</p>
+<p>Light your hand well. Even, front-facing light helps detection. Avoid strong backlighting such as a window behind you.<br>
+Keep your hand in frame. Raise it in clear view of the camera, with a plain background where possible.
+<br>Hold, don’t flick. Make each gesture clearly and keep it steady for a moment.
+<br>Keep the slideshow focused. If another window has focus, keystrokes go there instead.
+<br>Lock when idle. Lock between uses to avoid accidental triggers.
+<br>Have a backup. Keep a keyboard or clicker nearby for critical presentations.</p>
+</Layout>
+
+<style>
+  h1 {
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    margin-bottom: 40px;
+  }
+
+  .post-list {
+    list-style: none;
+  }
+
+  .post-list li {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .post-list a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+
+  .post-title {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .post-title:hover {
+    color: var(--link);
+  }
+
+  .post-date {
+    color: var(--text-muted);
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-left: 16px;
+  }
+
+  .post-excerpt {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+  .empty {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-top: 32px;
+  }
+</style>

@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Code } from "astro:components"
+---
+
+<Layout title="ISHARA">
+<h1>Installation Guide</h1>
+<section>
+    <h2>Source Code</h2>
+    <a href = "https://github.com/navaminagaraja23-ops/gesture-presenter">Github</a>
+  </section>
+  <section>
+    <h2>Cloning repository</h2>
+    <Code code = "git clone https://github.com/navaminagaraja23-ops/gesture-presenter.git
+cd gesture-presenter"lang = "bash" />
+  </section>
+  <section>
+    <h2>Python</h2>
+    <a href = "https://www.python.org/">Python</a>
+  </section>
+  <section>
+  <h1>pip installing requirements</h1>
+  <Code code="pip install requirements.txt" lang="powershell" />
+  </section>
+  <section>
+  <h1>pip installing Open CV</h1>
+  <Code code="pip install opencv-python" lang="powershell" />
+  </section>
+  <section>
+  <h1>pip installing Mediapipe</h1>
+  <Code code="pip install mediapipe" lang="powershell" />
+  </section>
+  <section>
+  <h1>pip installing PyAutoGUI</h1>
+  <Code code="pip install pyautogui" lang="powershell" />
+  </section>
+  <section>
+  <p>
+  After installing the packages import the packes to the "main.py"<br>
+  using<br>
+  <Code code="import cv2" lang="Python" />
+  <Code code="import mediapipe" lang = "Python"/>
+  <Code code="import pyautogui" lang = "Python"/>
+  </p>
+  </section>
+  <section>
+  <h2>Quick start</h2>
+  <p>
+  Run the application:
+  </p>
+  <Code code = " python main.py" lang = "bash" />
+  <p>
+  A webcam window opens.<br>
+  Open your slideshow in Google Slides or PowerPoint and start presenting.
+  <br>Click on the slideshow so it has keyboard focus. Commands are sent as keystrokes to whichever window is active.
+  <br>Hold a fist for 1.5 seconds to unlock.
+  <br>Use gestures to control your slides.
+  <br>Press Esc in the webcam window to quit.
+  </p>
+  </section>
+</Layout>
+
+<style>
+  h1 {
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    margin-bottom: 40px;
+  }
+
+  .post-list {
+    list-style: none;
+  }
+
+  .post-list li {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .post-list a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    text-decoration: none;
+  }
+
+  .post-title {
+    color: var(--text);
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .post-title:hover {
+    color: var(--link);
+  }
+
+  .post-date {
+    color: var(--text-muted);
+    font-size: 13px;
+    flex-shrink: 0;
+    margin-left: 16px;
+  }
+
+  .post-excerpt {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-top: 8px;
+  }
+
+  .empty {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-top: 32px;
+  }
+</style>
