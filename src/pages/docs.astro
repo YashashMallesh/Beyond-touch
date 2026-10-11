@@ -1,15 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const base = import.meta.env.BASE_URL;
 const sections = [
-  { title: 'Getting Started', description: 'Overview and setup instructions.', href: '\overview' },
-  { title: 'Requirements', description: 'What things are required and API Reference.', href: '\R' },
-  { title: 'Installation', description: 'Packages and more.', href: '\I' },
-  { title: 'Gesture Reference', description: 'Guide for gestures.', href: '\GR' },
-  { title: 'How it works', description: 'Architecture and workflow.', href: '\workflow' },
-  { title: 'Safety and reliability', description: 'Measures taken to avoid accidental gestures.', href: '\SR' },
+  { title: 'Getting Started', description: 'Overview and setup instructions.', href: `${base}/overview` },
+  { title: 'Requirements', description: 'What things are required and API Reference.', href: `${base}/R` },
+  { title: 'Installation', description: 'Packages and more.', href: `${base}/I` },
+  { title: 'Gesture Reference', description: 'Guide for gestures.', href: `${base}/GR` },
+  { title: 'How it works', description: 'Architecture and workflow.', href: `${base}/workflow` },
+  { title: 'Safety and reliability', description: 'Measures taken to avoid accidental gestures.', href: `${base}/SR` },
   { title: 'Contributors', description: 'People who worked on this project.', href: 'https://github.com/navaminagaraja23-ops/gesture-presenter#contributors' },
-  { title: 'Credits', description: 'Package and module providers.', href: '\credits' }
+  { title: 'Credits', description: 'Package and module providers.', href: `${base}/credits` }
 ];
 ---
 
